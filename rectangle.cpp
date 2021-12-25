@@ -8,11 +8,11 @@ void rectangle::SetSquare(double square)
 		double sq = Side * Base;
 		if (square < 0 || square != sq || Hight != Side)
 		{
-			throw exception("Íåïðàâèëüíî âû÷åñëåííà ïëîùàäü ïðÿìîóãîëüíèêà");
+			throw exception("ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾ Ð²Ñ‹Ñ‡ÐµÑÐ»ÐµÐ½Ð½Ð° Ð¿Ð»Ð¾Ñ‰Ð°Ð´ÑŒ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ°");
 		}
 		if (Hight != Side)
 		{
-			throw exception("Âûñòà äîëæà áûòü ðàâíà ñòîðîíå ïðÿìîóãîëüíèêà");
+			throw exception("Ð’Ñ‹ÑÑ‚Ð° Ð´Ð¾Ð»Ð¶Ð° Ð±Ñ‹Ñ‚ÑŒ Ñ€Ð°Ð²Ð½Ð° ÑÑ‚Ð¾Ñ€Ð¾Ð½Ðµ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ°");
 
 		}
 		Square = square;
@@ -36,7 +36,7 @@ void rectangle::SetDiagonal(double diagonal)
 	{
 		if (diag !=diagonal)
 		{
-			throw exception("Íåïðàâèëüíî ïîñ÷èòàíà äèàãîíàëü ïðÿìîóãîëüíèêà");
+			throw exception("ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾ Ð¿Ð¾ÑÑ‡Ð¸Ñ‚Ð°Ð½Ð° Ð´Ð¸Ð°Ð³Ð¾Ð½Ð°Ð»ÑŒ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ°");
 		}
 		Diagonal = diagonal;
 
@@ -60,7 +60,7 @@ rectangle::rectangle(double base, double hight, double side, double angle, doubl
 	{
 		if (angle != 45)
 		{
-			throw exception("Ó ïðÿìîêãîëüíèêà âñå óãëû = 45");
+			throw exception("Ð£ Ð¿Ñ€ÑÐ¼Ð¾ÐºÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ° Ð²ÑÐµ ÑƒÐ³Ð»Ñ‹ = 45");
 		}
 	}
 	catch (const std::exception& exp)
@@ -78,17 +78,17 @@ rectangle::rectangle(double base, double hight, double side, double angle, doubl
 
 void rectangle::type_of_quadrilateral()
 {
-	cout << "Ïðÿìîóãîëüíèê " << endl;
+	cout << "ÐŸÑ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸Ðº " << endl;
 }
 
 void rectangle::print(ostream & output) const
 {
-	output << "Îñíîâàíèå " << Base << endl;
-	output << "Âûñîòà " << Hight << endl;
-	output << "Ñòîðîíà " << Side << endl;
-	output << "Óãîë " << Angle << endl;
-	output << "Ïëîùàäü " << Square << endl;
-	output << "Äèàãîíàëü " << Diagonal << endl;
+	output << "ÐžÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ " << Base << endl;
+	output << "Ð’Ñ‹ÑÐ¾Ñ‚Ð° " << Hight << endl;
+	output << "Ð¡Ñ‚Ð¾Ñ€Ð¾Ð½Ð° " << Side << endl;
+	output << "Ð£Ð³Ð¾Ð» " << Angle << endl;
+	output << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ " << Square << endl;
+	output << "Ð”Ð¸Ð°Ð³Ð¾Ð½Ð°Ð»ÑŒ " << Diagonal << endl;
 }
 
 ostream& operator<<(ostream & output, const rectangle& temp)

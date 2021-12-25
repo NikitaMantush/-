@@ -5,7 +5,7 @@ void quadrilateral::SetBase(double base )
 {
 	if (base < 0)
 	{
-		throw exception("Основание не может быть отрицательным");
+		throw exception("РћСЃРЅРѕРІР°РЅРёРµ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рј");
 	}
 	Base = base;
 }
@@ -14,7 +14,7 @@ void quadrilateral::SetHight(double hight)
 {
 	if (hight < 0)
 	{
-		throw exception("Высота не может быть отрицательной");
+		throw exception("Р’С‹СЃРѕС‚Р° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕР№");
 	}
 	Hight=hight;
 }
@@ -23,7 +23,7 @@ void quadrilateral::SetSide(double side)
 {
 	if (side < 0)
 	{
-		throw exception("Сторона не может быть отрицательной");
+		throw exception("РЎС‚РѕСЂРѕРЅР° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕР№");
 	}
 	Side = side;
 }
@@ -32,7 +32,7 @@ void quadrilateral::SetAngle(double angle)
 {
 	if (angle < 0 || angle>90)
 	{
-		throw exception("Некоректный ввод угла");
+		throw exception("РќРµРєРѕСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ СѓРіР»Р°");
 	}
 	Angle = angle;
 }
@@ -59,7 +59,7 @@ quadrilateral::quadrilateral(double base, double hight, double side, double angl
 	{
 		if (hight>side)
 		{
-			throw exception("Высота не может быть больше стороны ");
+			throw exception("Р’С‹СЃРѕС‚Р° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ СЃС‚РѕСЂРѕРЅС‹ ");
 		}
 	}
 	catch (const std::exception& exp)
@@ -74,10 +74,10 @@ quadrilateral::quadrilateral(double base, double hight, double side, double angl
 }
 void quadrilateral::print(ostream& output) const
 {
-	output << "Основание " << Base << endl;
-	output << "Высота " << Hight << endl;
-	output << "Сторона " << Side << endl;
-	output << "Угол " << Angle << endl;
+	output << "РћСЃРЅРѕРІР°РЅРёРµ " << Base << endl;
+	output << "Р’С‹СЃРѕС‚Р° " << Hight << endl;
+	output << "РЎС‚РѕСЂРѕРЅР° " << Side << endl;
+	output << "РЈРіРѕР» " << Angle << endl;
 }
 
 ostream& operator<<(ostream& output, const quadrilateral& temp)

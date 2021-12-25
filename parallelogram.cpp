@@ -10,7 +10,7 @@ void parallelogram::SetSquare(double square)
 	{
 		if (square < 0 || square != sq)
 		{
-			throw exception("Íåïðàâèëüíî ââåäåíà ïëîùàäü ïàðàëëåëîãðàììà");
+			throw exception("ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾ Ð²Ð²ÐµÐ´ÐµÐ½Ð° Ð¿Ð»Ð¾Ñ‰Ð°Ð´ÑŒ Ð¿Ð°Ñ€Ð°Ð»Ð»ÐµÐ»Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð°");
 		}
 		Square = square;
 	}
@@ -28,7 +28,7 @@ void parallelogram::SetPerimetr(double perimetr)
 	{
 		if (perimetr != perim)
 		{
-			throw exception("Íåïðàâèëüíî ââåäåí ïåðèìåòð ïàðàëëåëîãðàììà");
+			throw exception("ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾ Ð²Ð²ÐµÐ´ÐµÐ½ Ð¿ÐµÑ€Ð¸Ð¼ÐµÑ‚Ñ€ Ð¿Ð°Ñ€Ð°Ð»Ð»ÐµÐ»Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð°");
 		}
 		Perimetr = perimetr;
 	}
@@ -53,7 +53,7 @@ parallelogram::parallelogram(double base, double hight, double side, double angl
 	{
 		if (side==base)
 		{
-			throw exception("Åñëè ó ïàðàëëåëîãðàììà âñå ñòîðîíû ðàâíû, òî ýòî ðîìá");
+			throw exception("Ð•ÑÐ»Ð¸ Ñƒ Ð¿Ð°Ñ€Ð°Ð»Ð»ÐµÐ»Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð° Ð²ÑÐµ ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñ‹ Ñ€Ð°Ð²Ð½Ñ‹, Ñ‚Ð¾ ÑÑ‚Ð¾ Ñ€Ð¾Ð¼Ð±");
 		}
 	}
 	catch (const std::exception& exp)
@@ -71,17 +71,17 @@ parallelogram::parallelogram(double base, double hight, double side, double angl
 
 void parallelogram::type_of_quadrilateral() 
 {
-	cout << "Ïàðàëëåëîãðàìì" << endl;
+	cout << "ÐŸÐ°Ñ€Ð°Ð»Ð»ÐµÐ»Ð¾Ð³Ñ€Ð°Ð¼Ð¼" << endl;
 }
 
 void parallelogram::print(ostream & output) const 
 {
-	output << "Îñíîâàíèå " << Base << endl;
-	output << "Âûñîòà " << Hight << endl;
-	output << "Ñòîðîíà " << Side << endl;
-	output << "Óãîë " << Angle << endl;
-	output << "Ïåðèìåòð  " << Perimetr << endl;
-	output << "Ïëîùàäü " << Square << endl;
+	output << "ÐžÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ " << Base << endl;
+	output << "Ð’Ñ‹ÑÐ¾Ñ‚Ð° " << Hight << endl;
+	output << "Ð¡Ñ‚Ð¾Ñ€Ð¾Ð½Ð° " << Side << endl;
+	output << "Ð£Ð³Ð¾Ð» " << Angle << endl;
+	output << "ÐŸÐµÑ€Ð¸Ð¼ÐµÑ‚Ñ€  " << Perimetr << endl;
+	output << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ " << Square << endl;
 }
 
 ostream& operator<<(ostream & output, const parallelogram& temp)

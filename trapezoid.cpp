@@ -6,7 +6,7 @@ void trapezoid::SetBase2(double base2)
 	{
 		if (base2 < 0)
 		{
-			throw exception("Îñíîâàíèå íå ìîæåò áûòü îòðèöàòåëüíûì");
+			throw exception("ÐžÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ð¼");
 		}
 		Base2 = base2;
 
@@ -30,7 +30,7 @@ void trapezoid::SetSquare(double square)
 	{
 		if (square < 0 || square != sq)
 		{
-			throw exception("Íåïðàâèëüíî ïîñ÷èòàíà ïëîùàäü òðàïåöèè");
+			throw exception("ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾ Ð¿Ð¾ÑÑ‡Ð¸Ñ‚Ð°Ð½Ð° Ð¿Ð»Ð¾Ñ‰Ð°Ð´ÑŒ Ñ‚Ñ€Ð°Ð¿ÐµÑ†Ð¸Ð¸");
 		}
 		Square = square;
 
@@ -59,17 +59,17 @@ trapezoid::trapezoid(double base, double hight, double side, double angle, doubl
 
 void trapezoid::type_of_quadrilateral()
 {
-	cout << "Òðàïåöèÿ " << endl;
+	cout << "Ð¢Ñ€Ð°Ð¿ÐµÑ†Ð¸Ñ " << endl;
 }
 
 void trapezoid::print(ostream & output) const
 {
-	output << "Îñíîâàíèå " << Base << endl;
-	output << "Âûñîòà " << Hight << endl;
-	output << "Ñòîðîíà " << Side << endl;
-	output << "Óãîë " << Angle << endl;
-	output << "Âòîðîå îñíîâàíèå " << Base2 << endl;
-	output << "Ïëîùàäü " << Square << endl;
+	output << "ÐžÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ " << Base << endl;
+	output << "Ð’Ñ‹ÑÐ¾Ñ‚Ð° " << Hight << endl;
+	output << "Ð¡Ñ‚Ð¾Ñ€Ð¾Ð½Ð° " << Side << endl;
+	output << "Ð£Ð³Ð¾Ð» " << Angle << endl;
+	output << "Ð’Ñ‚Ð¾Ñ€Ð¾Ðµ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ " << Base2 << endl;
+	output << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ " << Square << endl;
 }
 
 ostream& operator<<(ostream & output, const trapezoid& temp)

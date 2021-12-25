@@ -9,7 +9,7 @@ void rhomb::SetSquare(double square)
 	{
 		if (square < 0 || square != sq)
 		{
-			throw exception("Íåïðàâèëüíî ââåäåíà ïëîùàäü ðîìáà");
+			throw exception("ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾ Ð²Ð²ÐµÐ´ÐµÐ½Ð° Ð¿Ð»Ð¾Ñ‰Ð°Ð´ÑŒ Ñ€Ð¾Ð¼Ð±Ð°");
 		}
 		Square = square;
 	}
@@ -26,7 +26,7 @@ void rhomb::SetPerimetr(double perimetr)
 	{
 		if (perimetr != perim)
 		{
-			throw exception("Íåïðàâèëüíî ââåäåí ïåðèìåòð ïàðàëëåëîãðàììà");
+			throw exception("ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾ Ð²Ð²ÐµÐ´ÐµÐ½ Ð¿ÐµÑ€Ð¸Ð¼ÐµÑ‚Ñ€ Ð¿Ð°Ñ€Ð°Ð»Ð»ÐµÐ»Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð°");
 		}
 		Perimetr = perimetr;
 	}
@@ -52,7 +52,7 @@ rhomb::rhomb(double base, double hight, double side, double angle, double square
 	{
 		if (side != base)
 		{
-			throw exception("Ó ðîìáà âñå ñòîðîíû ðàâíû");
+			throw exception("Ð£ Ñ€Ð¾Ð¼Ð±Ð° Ð²ÑÐµ ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñ‹ Ñ€Ð°Ð²Ð½Ñ‹");
 		}
 	}
 	catch (const std::exception& exp)
@@ -70,17 +70,17 @@ rhomb::rhomb(double base, double hight, double side, double angle, double square
 
 void rhomb::type_of_quadrilateral()
 {
-	cout << "Ðîìá " << endl;
+	cout << "Ð Ð¾Ð¼Ð± " << endl;
 }
 
 void rhomb::print(ostream & output) const
 {
-	output << "Îñíîâàíèå " << Base << endl;
-	output << "Âûñîòà " << Hight << endl;
-	output << "Ñòîðîíà " << Side << endl;
-	output << "Óãîë " << Angle << endl;
-	output << "Ïëîùàäü " << Square << endl;
-	output << "Ïåðèìåòð  " << Perimetr << endl;
+	output << "ÐžÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ " << Base << endl;
+	output << "Ð’Ñ‹ÑÐ¾Ñ‚Ð° " << Hight << endl;
+	output << "Ð¡Ñ‚Ð¾Ñ€Ð¾Ð½Ð° " << Side << endl;
+	output << "Ð£Ð³Ð¾Ð» " << Angle << endl;
+	output << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ " << Square << endl;
+	output << "ÐŸÐµÑ€Ð¸Ð¼ÐµÑ‚Ñ€  " << Perimetr << endl;
 }
 
 ostream& operator<<(ostream & output, const rhomb& temp)
