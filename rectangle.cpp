@@ -58,9 +58,9 @@ rectangle::rectangle(double base, double hight, double side, double angle, doubl
 {
 	try
 	{
-		if (angle != 45)
+		if (angle != 90)
 		{
-			throw exception("У прямокгольника все углы = 45");
+			throw exception("У прямокгольника все углы = 90");
 		}
 	}
 	catch (const std::exception& exp)
